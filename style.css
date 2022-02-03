@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+   
+    background-color: rgb(10, 15, 25);
+    height: 100%;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width: 601px) {
+.container {
+    border-radius: 10px;
+    width: 1100px;
+    height: 445px;
+    background-color: rgb(30,25,60);
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    box-shadow: 0px 3px 20px black;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+}
+}
+
+.overlay {
+    mix-blend-mode: multiply;
+    position: absolute;
+    background-color: rgb(159, 85, 202);
+    height: 447px;
+    width: 550px;
+}
+#text {
+    margin-left: 13%;
+    margin-right: 20%;
+    margin-top: 8%;
+}
+h1 {
+    padding-top: 20px;
+    font-size: 2rem;
+    color: white;
+}
+    span {
+        color: rgb(159, 85, 202);
+    }
+h2 {
+    padding-top: 30px;
+    color: rgba(216, 191, 216, 0.664);
+    font-size: .9rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+#info {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+}
+.infodata {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.infolabel {
+    font-size: .9rem;
+    color: rgba(216, 191, 216, 0.664);
+}
+.attribution {
+    font-size: .8rem;
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    bottom: 50px;
+    color: rgba(255, 255, 255, 0.719);
+}
+.attribution a {
+    text-decoration: none;
+    color: rgb(95, 172, 164);
+}
+
+@media screen and (max-width: 600px){
+    .container {
+        border-radius: 10px;
+        width: 360px;
+        height: 850px;
+        background-color: rgb(30,25,60);
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin: auto;
+        box-shadow: 0px 3px 20px black;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 0.6fr 1.4fr;
+        grid-template-areas:
+            "imageheader"
+            "information";
+    }
+    #image {
+        text-align: center;
+        grid-area: imageheader;
+    }
+    #image img {
+        width: 360px;
+    }
+    .overlay {
+        height: 297px;
+    }
+    #text {
+        width: 75%;
+        margin: 15px auto 0 auto;
+        text-align: center;
+    }
+    h1 {
+        padding-top: 15px;
+        font-size: 1.8rem;
+    }
+    h2 {
+        margin: 10px 15px 0 15px;
+        padding-top: 15px;
+        font-size: 0.9rem;
+    }
+    #info {
+        text-align: center;
+        display: inline;
+    }
+    .infodata {
+        font-size: 1.5rem;
+        padding-top: 30px;
+    }
+    .infolabel {
+        font-size: 0.7rem;
+        padding-bottom: 10px;
+    }
+    .attribution {
+        font-size: 0.6rem;
+        position: absolute;
+        bottom: 10px;
+        width: 40%;
+        text-align: center;
+    }
+}
